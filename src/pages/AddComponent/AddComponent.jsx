@@ -57,7 +57,7 @@ const AddComponent = () => {
                     Swal.fire({
                         icon: 'success',
                         title: 'Wow...',
-                        text: 'Code add successfully',
+                        text: 'Component add successfully',
 
                     })
                 }
@@ -67,7 +67,7 @@ const AddComponent = () => {
     return (
         <div>
             <div className="bg-[#EEEEEE] p-10 text-black">
-                <p className="text-3xl font-bold text-center mb-[30px] "> Add Level Problem</p>
+                <p className="text-3xl font-bold text-center mb-[30px] "> Add Component</p>
 
                 <form onSubmit={handleAdd}>
 

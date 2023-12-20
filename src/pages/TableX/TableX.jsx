@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import useComponent from "../../hooks/useComponent";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const TableX = () => {
@@ -14,7 +15,38 @@ const TableX = () => {
     }
     const myComponent = component?.filter(item => item?.titleName == currentTitle);
 
-    
+    const handleDelete = id => {
+        console.log("delete id : ", id);
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/component/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount > 0) {
+                            refetch();
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
+            }
+        });
+    }
+
+
 
     console.log("myComponent : ", myComponent);
     return (
@@ -51,7 +83,7 @@ const TableX = () => {
                                 {
                                     user?.email=="rizve@gmail.com"&&<td>
                                         <button
-                                            // onClick={() => handleDelete(item._id)}
+                                            onClick={() => handleDelete(item._id)}
                                             className="btn btn-ghost btn-sm">
                                             Delete
 

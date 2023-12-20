@@ -1,7 +1,11 @@
+/* eslint-disable no-unused-vars */
 import Swal from "sweetalert2";
+import useTitle from "../../hooks/useTitle";
 
 
 const Title = () => {
+
+    const [refetch,title,isLoading] =useTitle();
 
     const handleAdd = event => {
         event.preventDefault();
@@ -31,6 +35,7 @@ const Title = () => {
             .then(data => {
                 console.log("add  : ", data)
                 if (data.insertedId) {
+                    refetch();
                     Swal.fire({
                         icon: 'success',
                         title: 'Wow...',

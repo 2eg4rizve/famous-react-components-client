@@ -1,3 +1,4 @@
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
@@ -6,15 +7,14 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAL1Y1fCVpz9eWxSChQHP9llZwlJNaLDuo",
-  authDomain: "any-project-a7278.firebaseapp.com",
-  projectId: "any-project-a7278",
-  storageBucket: "any-project-a7278.appspot.com",
-  messagingSenderId: "850652531339",
-  appId: "1:850652531339:web:e4dfc610478dd74533a28e"
+  apiKey: "AIzaSyBRkQw6s2jjcU4Q8DWsssKxPBbKtmx4Gtg",
+  authDomain: "famousreactcomponents.firebaseapp.com",
+  projectId: "famousreactcomponents",
+  storageBucket: "famousreactcomponents.appspot.com",
+  messagingSenderId: "244574743207",
+  appId: "1:244574743207:web:a310e90efe72902d138982"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 export const auth =getAuth(app);

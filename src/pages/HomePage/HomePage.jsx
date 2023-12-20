@@ -38,7 +38,7 @@ const HomePage = () => {
                         {/* <li style={{ background: currentTitle == "Table" ? "red" : "" }}><NavLink to="/home/tableX"><button onClick={() => setCurrentTitle("Table")} >Table</button></NavLink> </li>
 
                         <li style={{ background: currentTitle == "Notification" ? "red" : "" }}><NavLink to="/home/tableX"><button onClick={() => setCurrentTitle("Notification")} >Notification</button></NavLink> </li> */}
-                        
+
                         {/* 
                         <li style={{ background: currentTitle == "Table"? "red" : "" }}><NavLink to="/home/tableX"><button  onClick={() => setCurrentTitle("Table")} >Table</button></NavLink> </li> */}
 
@@ -46,7 +46,7 @@ const HomePage = () => {
                         {/* <li ><NavLink to="/home/tableX"><button >Carousel</button></NavLink> </li>
 
                         <li ><NavLink to="/home/tableX"><button >Buttons</button></NavLink> </li> */}
-                        <p>..............</p>
+                        {/* <p>..............</p> */}
 
                         {
 
