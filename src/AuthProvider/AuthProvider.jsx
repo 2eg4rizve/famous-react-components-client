@@ -17,7 +17,7 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
 
-    const [currentComponent,setCurrentComponent] = "Tabs";
+    const [currentTitle,setCurrentTitle] = useState("Table");
 
     //google login
     const googleLogin = () => {
@@ -85,7 +85,10 @@ const AuthProvider = ({ children }) => {
         user,
         loading,
         githubLogin,
-        handleUpdateProfile
+        handleUpdateProfile,
+        currentTitle,
+        setCurrentTitle
+
 
 
     }

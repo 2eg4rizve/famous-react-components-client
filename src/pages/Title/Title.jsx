@@ -43,7 +43,7 @@ const Title = () => {
     return (
         <div>
             <div className="bg-[#EEEEEE] p-10 text-black">
-                <p className="text-3xl font-bold text-center mb-[30px] "> Add Level Problem</p>
+                <p className="text-3xl font-bold text-center mb-[30px] "> Add Title</p>
 
                 <form onSubmit={handleAdd}>
 
